@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "Andy Hamper",
+      "email": "1@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Ntwali Andrew",
+      "email": "ntwaliandy90@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Fred Chrump",
+      "email": "chrump@index.com",
+      "id": 3
+    }
+  ]
+}

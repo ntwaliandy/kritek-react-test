@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Kritek React Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a simple CRUD application built with React and JSON server. It allows users to view, create, update, and delete user data.
 
-## Available Scripts
+## Files
 
-In the project directory, you can run:
+- `App.js`: The main component of the React application. Handles routing and renders different components based on the current URL.
 
-### `npm start`
+- `index.js`: The entry point of the React application. Renders the `App` component and mounts it to the DOM.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `components/UserList.js`: Displays a list of users fetched from the API. Uses the `useQuery` hook from `react-query` to handle data fetching and loading/error states.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `components/UserForm.js`: Used for creating and updating user data. Utilizes the `useMutation` hook from `react-query` to handle API requests for creating and updating users.
 
-### `npm test`
+- `components/User.js`: Represents an individual user in the list. Displays user information and provides buttons for editing and deleting the user.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `services/api.js`: Contains helper functions for making API requests. Uses the `axios` library to send HTTP requests to the JSON server API endpoints.
 
-### `npm run build`
+- `db.json`: Serves as the data source for the JSON server. Contains an array of user objects that the API endpoints interact with.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository: `git clone https://github.com/ntwaliandy/kritek-react-test.git`
+2. Install dependencies: `npm install`
+3. Start the JSON server: `json-server --watch db.json`
+4. Start the React application: `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure the JSON server is running on `http://localhost:3000/users` for the application to fetch user data correctly.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Access the application at `http://localhost:3000`.
+- The user list will be displayed, showing the existing users.
+- Use the form to create a new user or click on the edit button to update an existing user.
+- Click on the delete button to remove a user from the list.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to explore and interact with the application!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Credits
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was created by Ntwali Andrew. For more information, contact ntwaliandy90@gmail.com.
